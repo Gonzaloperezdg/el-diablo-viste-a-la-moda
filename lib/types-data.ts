@@ -19,6 +19,8 @@ export interface PersonalityType {
   whoAdmire: { type: string; text: string }
   coverLine: string
   shareCaption: string
+  restartCta: string
+  closingLine: string
 }
 
 export const typesData: Record<TypeKey, PersonalityType> = {
@@ -49,6 +51,8 @@ export const typesData: Record<TypeKey, PersonalityType> = {
     whoAdmire: { type: 'otra Editora', text: 'La única persona cuya opinión te importa sin que lo admitas es la que tiene tu mismo nivel de exigencia.' },
     coverLine: '"No pido dos veces."',
     shareCaption: 'Me salió La Editora. No me sorprende. A vos tampoco debería.',
+    restartCta: '¿Inconforme? Podés intentarlo de nuevo.',
+    closingLine: 'Esta es solo una lectura. Es honesta. No es total.',
   },
   T: {
     key: 'T',
@@ -77,6 +81,8 @@ export const typesData: Record<TypeKey, PersonalityType> = {
     whoAdmire: { type: 'La Editora', text: 'Querés la claridad que tiene. No el costo que paga. Esa tensión te define.' },
     coverLine: '"Aprendí el idioma. Elegí dónde vivir."',
     shareCaption: 'La Traductora. Creo que está bien. También creo que es educado de su parte.',
+    restartCta: '¿Otra perspectiva? Podés volver a empezar.',
+    closingLine: 'Una lectura es solo un punto de partida. Lo demás lo escribís vos.',
   },
   A: {
     key: 'A',
@@ -105,6 +111,8 @@ export const typesData: Record<TypeKey, PersonalityType> = {
     whoAdmire: { type: 'El Curador', text: 'Su paz con la invisibilidad es lo que más querés y menos entendés cómo conseguir.' },
     coverLine: '"Lo di todo. No sé bien a quién."',
     shareCaption: 'Salió La Acólita. Devastador. Preciso.',
+    restartCta: 'Dale otra vez. Aunque probablemente salga igual.',
+    closingLine: 'Esta es solo una lectura. Lo que no vio tampoco es menor.',
   },
   C: {
     key: 'C',
@@ -133,6 +141,8 @@ export const typesData: Record<TypeKey, PersonalityType> = {
     whoAdmire: { type: 'La Editora', text: 'Su capacidad de decidir sin justificarse es lo que nunca terminás de alcanzar. Eso no es una debilidad tuya. Es una elección.' },
     coverLine: '"Nunca pedí el crédito. Solo me aseguré de que el trabajo sobreviviera."',
     shareCaption: 'El Curador. En silencio, siempre.',
+    restartCta: 'Podés intentarlo de nuevo, si eso te dice algo.',
+    closingLine: 'Una buena lectura no responde todo. Solo organiza algunas preguntas.',
   },
 }
 

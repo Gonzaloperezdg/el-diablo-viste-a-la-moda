@@ -290,7 +290,7 @@ export default function ResultScreen({ result, onRestart }: Props) {
           <div className="divider-line mb-12 opacity-20" />
 
           <p className="font-display font-light italic text-ink-tertiary mb-12 text-pretty" style={{ fontSize: '1.1rem' }}>
-            Esta es solo una lectura. Es honesta. No es total.
+            {type.closingLine}
           </p>
 
           {/* Grilla de los cuatro tipos con imágenes de personaje */}
@@ -339,9 +339,9 @@ export default function ResultScreen({ result, onRestart }: Props) {
           <button
             onClick={onRestart}
             className="font-ui text-caption text-ink-tertiary hover:text-ink-primary transition-[color] duration-200 border-b border-ink-tertiary pb-1"
-            style={{ letterSpacing: '0.12em' }}
+            style={{ letterSpacing: '0.08em' }}
           >
-            Hacerlo de nuevo
+            {type.restartCta}
           </button>
 
           {/* Pie de página */}
