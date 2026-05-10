@@ -47,7 +47,7 @@ export default function ShareButtons({ type }: Props) {
     <button
       onClick={handleShare}
       disabled={status === 'generating'}
-      className="font-ui text-caption text-ink-tertiary hover:text-ink-primary transition-[color] duration-200 border border-divider hover:border-ink-tertiary px-6 py-3 disabled:opacity-40 disabled:cursor-not-allowed"
+      className="font-ui text-caption text-ink-secondary hover:text-ink-primary transition-[color,border-color] duration-200 border border-ink-tertiary hover:border-ink-primary px-6 py-3 disabled:opacity-40 disabled:cursor-not-allowed"
       style={{ letterSpacing: '0.1em' }}
     >
       {status === 'generating'
