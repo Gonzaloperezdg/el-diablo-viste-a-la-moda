@@ -5,18 +5,23 @@ import LandingScreen from '@/components/LandingScreen'
 import QuizScreen from '@/components/QuizScreen'
 import RevealScreen from '@/components/RevealScreen'
 import ResultScreen from '@/components/ResultScreen'
-import { AnswerKey } from '@/lib/questions'
+import { AnswerKey, Question, TypeKey, selectRandomQuestions } from '@/lib/questions'
 import { calculateResult, ScoreResult } from '@/lib/scoring'
-import { TypeKey } from '@/lib/questions'
 
 type Phase = 'landing' | 'quiz' | 'reveal' | 'result'
+
+const QUIZ_SIZE = 10
 
 export default function Home() {
   const [phase, setPhase] = useState<Phase>('landing')
   const [answers, setAnswers] = useState<AnswerKey[]>([])
   const [result, setResult] = useState<ScoreResult | null>(null)
+  const [selectedQuestions, setSelectedQuestions] = useState<Question[]>([])
 
   const handleBegin = useCallback(() => {
+    setSelectedQuestions(selectRandomQuestions(QUIZ_SIZE))
+    setAnswers([])
+    setResult(null)
     setPhase('quiz')
   }, [])
 
@@ -24,12 +29,12 @@ export default function Home() {
     const newAnswers = [...answers.slice(0, questionIndex), answer]
     setAnswers(newAnswers)
 
-    if (questionIndex === 14) {
-      const calculated = calculateResult(newAnswers)
+    if (questionIndex === selectedQuestions.length - 1) {
+      const calculated = calculateResult(newAnswers, selectedQuestions)
       setResult(calculated)
       setPhase('reveal')
     }
-  }, [answers])
+  }, [answers, selectedQuestions])
 
   const handleRevealComplete = useCallback(() => {
     setPhase('result')
@@ -38,6 +43,7 @@ export default function Home() {
   const handleRestart = useCallback(() => {
     setAnswers([])
     setResult(null)
+    setSelectedQuestions([])
     setPhase('landing')
   }, [])
 
@@ -46,8 +52,8 @@ export default function Home() {
       {phase === 'landing' && (
         <LandingScreen key="landing" onBegin={handleBegin} />
       )}
-      {phase === 'quiz' && (
-        <QuizScreen key="quiz" answers={answers} onAnswer={handleAnswer} />
+      {phase === 'quiz' && selectedQuestions.length > 0 && (
+        <QuizScreen key="quiz" answers={answers} onAnswer={handleAnswer} questions={selectedQuestions} />
       )}
       {phase === 'reveal' && result && (
         <RevealScreen

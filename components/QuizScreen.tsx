@@ -1,14 +1,15 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { questions, AnswerKey } from '@/lib/questions'
+import { Question, AnswerKey } from '@/lib/questions'
 
 interface Props {
   answers: AnswerKey[]
   onAnswer: (answer: AnswerKey, questionIndex: number) => void
+  questions: Question[]
 }
 
-export default function QuizScreen({ answers, onAnswer }: Props) {
+export default function QuizScreen({ answers, onAnswer, questions }: Props) {
   const currentIndex = answers.length
   const question = questions[currentIndex]
   const [selected, setSelected] = useState<AnswerKey | null>(null)
@@ -56,7 +57,7 @@ export default function QuizScreen({ answers, onAnswer }: Props) {
       {/* Question counter */}
       <div className="fixed top-0 right-0 p-6 md:p-8 z-40">
         <span className="font-ui text-caption text-ink-tertiary" style={{ letterSpacing: '0.1em' }}>
-          {String(currentIndex + 1).padStart(2, '0')}&nbsp;/&nbsp;{questions.length}
+          {String(currentIndex + 1).padStart(2, '0')}&nbsp;/&nbsp;{String(questions.length).padStart(2, '0')}
         </span>
       </div>
 
@@ -84,7 +85,7 @@ export default function QuizScreen({ answers, onAnswer }: Props) {
 
         {/* Options */}
         <div className="flex flex-col gap-0" role="radiogroup" aria-label={question.text}>
-          {question.options.map((option) => (
+          {question.options.map((option, optionIndex) => (
             <div
               key={option.id}
               role="radio"
@@ -96,7 +97,7 @@ export default function QuizScreen({ answers, onAnswer }: Props) {
             >
               <div className="flex gap-4 items-start">
                 <span className="font-ui text-caption text-ink-tertiary pt-1 shrink-0 w-4" style={{ letterSpacing: '0.05em' }}>
-                  {option.id}
+                  {String.fromCharCode(65 + optionIndex)}
                 </span>
                 <span
                   className={`font-display font-light text-pretty transition-[color] duration-200 ${selected === option.id ? 'text-ink-primary' : 'text-ink-secondary'}`}

@@ -180,4 +180,178 @@ export const questions: Question[] = [
       { id: 'D', text: "No cambia nada. Mi nombre nunca fue lo importante.", scores: { C: 2, T: 1 } },
     ]
   },
+  {
+    id: 16,
+    scene: "La reunión",
+    text: "Estás en una reunión donde la mayoría habla sin decir nada. ¿Qué hacés?",
+    options: [
+      { id: 'A', text: "Intervengo cuando veo que la conversación se está yendo de tema.", scores: { E: 2, C: 1 } },
+      { id: 'B', text: "Observo el dinamismo: quién convence, quién cede, quién actúa.", scores: { C: 2, E: 1 } },
+      { id: 'C', text: "Participo activamente aunque no sea siempre necesario. Aporta estar presente.", scores: { A: 2, T: 1 } },
+      { id: 'D', text: "Digo lo que tengo que decir. Cuando no hay nada para sumar, no hablo.", scores: { T: 2, A: 1 } },
+    ]
+  },
+  {
+    id: 17,
+    scene: "El feedback",
+    text: "Alguien de tu círculo te pide retroalimentación honesta sobre algo que hizo mal.",
+    options: [
+      { id: 'A', text: "Lo doy directo, sin suavizarlo. El respeto real es decir la verdad.", scores: { E: 2, A: 1 } },
+      { id: 'B', text: "Lo doy con cuidado. No quiero que deje de intentarlo.", scores: { T: 2, C: 1 } },
+      { id: 'C', text: "Pienso cómo decirlo para que no sea destructivo. La forma importa tanto como el contenido.", scores: { C: 2, E: 1 } },
+      { id: 'D', text: "Lo doy de inmediato, pero después me pregunto si fui demasiado directa/o.", scores: { A: 2, T: 1 } },
+    ]
+  },
+  {
+    id: 18,
+    scene: "El fracaso ajeno",
+    text: "Una persona con la que competís comete un error importante y público. ¿Cómo lo vivís?",
+    options: [
+      { id: 'A', text: "Con discreción. No celebro el fracaso ajeno, pero tampoco finjo que no pasó.", scores: { C: 2, T: 1 } },
+      { id: 'B', text: "Con alivio que intento no mostrar. Después me arrepiento del alivio.", scores: { A: 2, E: 1 } },
+      { id: 'C', text: "Con curiosidad analítica. Me pregunto qué falló y qué debería haber hecho distinto.", scores: { E: 2, C: 1 } },
+      { id: 'D', text: "Con empatía. El fracaso ajeno me recuerda que todos estamos expuestos.", scores: { T: 2, A: 1 } },
+    ]
+  },
+  {
+    id: 19,
+    scene: "La comparación",
+    text: "Alguien te compara directamente con otra persona — en tu cara — como si fuera un cumplido. ¿Cómo lo procesás?",
+    options: [
+      { id: 'A', text: "Me irrita. No soy una referencia relativa.", scores: { E: 2, C: 1 } },
+      { id: 'B', text: "Me pregunto si la comparación tiene razón y en qué medida.", scores: { T: 2, A: 1 } },
+      { id: 'C', text: "Depende de con quién me comparan. Si es alguien que admiro, lo proceso bien.", scores: { A: 2, E: 1 } },
+      { id: 'D', text: "La registro como información sobre quien me está hablando, no sobre mí.", scores: { C: 2, T: 1 } },
+    ]
+  },
+  {
+    id: 20,
+    scene: "La agenda",
+    text: "Tu manera de gestionar el tiempo y las prioridades es:",
+    options: [
+      { id: 'A', text: "Tengo un sistema propio, no negociable. Lo que no entra en la agenda, no existe.", scores: { E: 2, A: 1 } },
+      { id: 'B', text: "Priorizo según lo que siento que realmente importa, aunque no siempre sea lo urgente.", scores: { C: 2, T: 1 } },
+      { id: 'C', text: "Reviso mis listas constantemente. La idea de olvidarme algo me genera ansiedad real.", scores: { A: 2, E: 1 } },
+      { id: 'D', text: "Flexible pero con criterio. Sé cuándo ceder el tiempo y cuándo no.", scores: { T: 2, C: 1 } },
+    ]
+  },
+  {
+    id: 21,
+    scene: "El reconocimiento inesperado",
+    text: "Alguien con autoridad te reconoce públicamente por algo que hiciste. Tu primera reacción:",
+    options: [
+      { id: 'A', text: "Satisfacción. Sabía que el trabajo estaba bien hecho. Que lo vean es el orden natural.", scores: { E: 2, T: 1 } },
+      { id: 'B', text: "Alivio y orgullo al mismo tiempo. Era lo que necesitaba para saber que valió la pena.", scores: { A: 2, E: 1 } },
+      { id: 'C', text: "Incomodidad. No me siento del todo cómoda/o siendo el centro de la atención.", scores: { C: 2, A: 1 } },
+      { id: 'D', text: "Gratitud genuina, pero también una pregunta: ¿qué espera ahora de mí?", scores: { T: 2, C: 1 } },
+    ]
+  },
+  {
+    id: 22,
+    scene: "El conflicto",
+    text: "Tenés un conflicto con alguien que te importa. ¿Qué hacés en las primeras horas?",
+    options: [
+      { id: 'A', text: "Analizo qué pasó y qué tiene que ocurrir para resolverlo. Después hablo.", scores: { E: 2, C: 1 } },
+      { id: 'B', text: "Hablo apenas puedo. El conflicto sin resolver me consume.", scores: { A: 2, T: 1 } },
+      { id: 'C', text: "Espero tener claridad antes de decir algo que no puedo deshacer.", scores: { C: 2, E: 1 } },
+      { id: 'D', text: "Hablo pronto, pero primero escucho. Quiero entender la otra versión antes de dar la mía.", scores: { T: 2, A: 1 } },
+    ]
+  },
+  {
+    id: 23,
+    scene: "La decisión difícil",
+    text: "Tenés que tomar una decisión importante con información incompleta y sin tiempo. ¿Cómo decidís?",
+    options: [
+      { id: 'A', text: "Confío en mi criterio. Tengo suficiente información interna acumulada para saber.", scores: { E: 2, C: 1 } },
+      { id: 'B', text: "Busco a alguien con una perspectiva que yo no tengo, aunque sea rápido.", scores: { T: 2, A: 1 } },
+      { id: 'C', text: "Me paralizo un momento y después actúo. La indecisión me produce más ansiedad que el error.", scores: { A: 2, E: 1 } },
+      { id: 'D', text: "Elijo la opción que minimiza el daño irreversible. Lo demás se puede ajustar.", scores: { C: 2, T: 1 } },
+    ]
+  },
+  {
+    id: 24,
+    scene: "La imagen pública",
+    text: "La versión que el mundo ve de vos en redes o en contextos profesionales:",
+    options: [
+      { id: 'A', text: "Es calculada. Muestro lo que sirve para el contexto.", scores: { E: 2, A: 1 } },
+      { id: 'B', text: "Es más o menos la misma que en privado. No tengo energía para mantener dos versiones.", scores: { T: 2, C: 1 } },
+      { id: 'C', text: "Es lo mejor de mí, amplificado. Quiero que me vean en mi mejor versión posible.", scores: { A: 2, E: 1 } },
+      { id: 'D', text: "Es una selección cuidadosa de lo que vale la pena mostrar, no lo que me hace ver bien.", scores: { C: 2, T: 1 } },
+    ]
+  },
+  {
+    id: 25,
+    scene: "El proyecto personal",
+    text: "Tenés un proyecto personal que empezaste pero nunca terminaste. ¿Qué pasó?",
+    options: [
+      { id: 'A', text: "Perdió prioridad cuando llegó algo más urgente. Pienso que algún día lo retomo.", scores: { T: 2, A: 1 } },
+      { id: 'B', text: "Lo dejé porque no llegaba al estándar que me había propuesto. Mejor nada que algo mediocre.", scores: { E: 2, C: 1 } },
+      { id: 'C', text: "Lo abandoné cuando el contexto que lo motivaba cambió. Sin ese contexto, perdió sentido.", scores: { C: 2, T: 1 } },
+      { id: 'D', text: "Lo pausé por miedo a que no fuera suficientemente bueno. Todavía me pesa.", scores: { A: 2, E: 1 } },
+    ]
+  },
+  {
+    id: 26,
+    scene: "El límite",
+    text: "Alguien que te importa cruza un límite que vos tenés claro. ¿Cómo respondés?",
+    options: [
+      { id: 'A', text: "Lo digo, sin drama pero sin ambigüedad. El límite no se negocia.", scores: { E: 2, T: 1 } },
+      { id: 'B', text: "Lo digo, pero me lleva tiempo encontrar las palabras para hacerlo bien.", scores: { T: 2, A: 1 } },
+      { id: 'C', text: "Lo aguanto más de lo que debería. El conflicto me cuesta más que el límite cruzado.", scores: { A: 2, C: 1 } },
+      { id: 'D', text: "Tomo distancia sin nombrarlo. Los actos dicen más que la conversación.", scores: { C: 2, E: 1 } },
+    ]
+  },
+  {
+    id: 27,
+    scene: "La lealtad",
+    text: "Una persona de tu círculo comete algo cuestionable. Vos lo sabés. ¿Qué hacés?",
+    options: [
+      { id: 'A', text: "Depende de la gravedad. Si es grave, no puedo callarme aunque me cueste la relación.", scores: { E: 2, A: 1 } },
+      { id: 'B', text: "Lo hablo con ella/él primero, antes de hacer nada. Quiero entender qué pasó.", scores: { T: 2, C: 1 } },
+      { id: 'C', text: "Lo proceso en silencio. No soy quién para juzgar y el costo social de hablar es alto.", scores: { A: 2, T: 1 } },
+      { id: 'D', text: "Guardo la información. No la comparto ni la confronto, pero la tengo.", scores: { C: 2, E: 1 } },
+    ]
+  },
+  {
+    id: 28,
+    scene: "La tendencia",
+    text: "Algo se vuelve viral o muy popular en tu industria. Tu primera reacción:",
+    options: [
+      { id: 'A', text: "La analizo para entender si hay algo real ahí o es solo ruido.", scores: { E: 2, C: 1 } },
+      { id: 'B', text: "La pruebo o la investigo. No quiero quedarme fuera de algo que puede ser útil.", scores: { A: 2, T: 1 } },
+      { id: 'C', text: "Espero a que baje el ruido. Las tendencias revelan más sobre quien las adopta que sobre ellas mismas.", scores: { C: 2, E: 1 } },
+      { id: 'D', text: "La registro, evalúo si me sirve y decido sin presión del hype.", scores: { T: 2, A: 1 } },
+    ]
+  },
+  {
+    id: 29,
+    scene: "El error ajeno",
+    text: "Un colega comete un error que te afecta directamente. ¿Cómo lo manejás?",
+    options: [
+      { id: 'A', text: "Lo señalo, sin dramatismo. Necesito que sepa qué pasó para que no se repita.", scores: { E: 2, A: 1 } },
+      { id: 'B', text: "Lo resuelvo primero, y hablo cuando hay tiempo y calma.", scores: { C: 2, T: 1 } },
+      { id: 'C', text: "Me cuesta no mostrar la irritación, pero trato. No siempre lo logro.", scores: { A: 2, E: 1 } },
+      { id: 'D', text: "Escucho su versión antes de concluir nada. Probablemente hay algo que yo no vi.", scores: { T: 2, C: 1 } },
+    ]
+  },
+  {
+    id: 30,
+    scene: "El cierre",
+    text: "Si alguien que te conoce bien tuviera que describir cómo sos realmente — no cómo te presentás — ¿qué palabra no debería faltar?",
+    options: [
+      { id: 'A', text: "Exigente. Conmigo y con todo lo que me importa.", scores: { E: 2, C: 1 } },
+      { id: 'B', text: "Honesta/o. A veces incómodamente.", scores: { T: 2, E: 1 } },
+      { id: 'C', text: "Dedicada/o. A veces hasta el límite de lo sano.", scores: { A: 2, T: 1 } },
+      { id: 'D', text: "Observador/a. Siempre veo más de lo que muestro.", scores: { C: 2, A: 1 } },
+    ]
+  },
 ]
+
+export function selectRandomQuestions(count: number): Question[] {
+  const shuffled = [...questions].sort(() => Math.random() - 0.5)
+  const selected = shuffled.slice(0, count)
+  return selected.map(q => ({
+    ...q,
+    options: [...q.options].sort(() => Math.random() - 0.5),
+  }))
+}

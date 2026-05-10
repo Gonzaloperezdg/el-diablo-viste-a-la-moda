@@ -1,4 +1,4 @@
-import { questions, AnswerKey, TypeKey } from './questions'
+import { Question, AnswerKey, TypeKey } from './questions'
 
 export interface ScoreResult {
   scores: Record<TypeKey, number>
@@ -7,11 +7,11 @@ export interface ScoreResult {
   isHybrid: boolean
 }
 
-export function calculateResult(answers: AnswerKey[]): ScoreResult {
+export function calculateResult(answers: AnswerKey[], selectedQuestions: Question[]): ScoreResult {
   const scores: Record<TypeKey, number> = { E: 0, T: 0, A: 0, C: 0 }
 
   answers.forEach((answer, index) => {
-    const question = questions[index]
+    const question = selectedQuestions[index]
     if (!question) return
     const option = question.options.find(o => o.id === answer)
     if (!option) return
