@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { TypeKey } from '@/lib/questions'
 import { typesData } from '@/lib/types-data'
 import { ScoreResult } from '@/lib/scoring'
+import ShareButtons from './ShareButtons'
 
 interface Props {
   result: ScoreResult
@@ -272,16 +273,11 @@ export default function ResultScreen({ result, onRestart }: Props) {
             className="font-ui text-caption text-ink-tertiary hover:text-ink-primary transition-[color] duration-200 border border-divider hover:border-ink-tertiary px-6 py-3 text-left sm:text-center"
             style={{ letterSpacing: '0.1em', minWidth: '160px' }}
           >
-            {copied ? '✓ Copiado' : 'Copiar'}
-          </button>
-          <button
-            onClick={() => copyToClipboard(`${type.coverLine}\n\n${type.shareCaption}\n\nRUNWAY — Edición El Diablo Viste a la Moda`)}
-            className="font-ui text-caption text-ink-tertiary hover:text-ink-primary transition-[color] duration-200 border border-divider hover:border-ink-tertiary px-6 py-3 text-left sm:text-center"
-            style={{ letterSpacing: '0.1em', minWidth: '160px' }}
-          >
-            Copiar para compartir
+            {copied ? '✓ Copiado' : 'Copiar frase'}
           </button>
         </div>
+
+        <ShareButtons type={type} />
       </Section>
 
       {/* ─── CIERRE ─── */}
