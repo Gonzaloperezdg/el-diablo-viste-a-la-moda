@@ -35,7 +35,7 @@ const config: Config = {
         "display-l": ["clamp(2.5rem,6vw,5.5rem)", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
         "display-m": ["clamp(1.75rem,4vw,3.5rem)", { lineHeight: "1.1", letterSpacing: "-0.01em" }],
         headline: ["clamp(1.25rem,2.5vw,2rem)", { lineHeight: "1.2" }],
-        subhead: ["clamp(1rem,2vw,1.25rem)", { lineHeight: "1.4", fontStyle: "italic" }],
+        subhead: ["clamp(1rem,2vw,1.25rem)", { lineHeight: "1.4" }],
         "body-l": ["clamp(1.05rem,1.5vw,1.2rem)", { lineHeight: "1.65" }],
         body: ["1rem", { lineHeight: "1.6" }],
         caption: ["0.75rem", { lineHeight: "1.4", letterSpacing: "0.08em" }],
