@@ -18,11 +18,11 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "RUNWAY — A Cultural Profile",
-  description: "Inspired by The Devil Wears Prada. A 4-minute editorial profile of who you are inside the systems that demand everything from you.",
+  title: "RUNWAY · Un perfil editorial",
+  description: "Inspirado en El Diablo Viste a la Moda. Un perfil editorial de 4 minutos sobre quién sos dentro de los sistemas que lo exigen todo.",
   openGraph: {
-    title: "RUNWAY — A Cultural Profile",
-    description: "Four types. Fifteen questions. One honest read.",
+    title: "RUNWAY · Un perfil editorial",
+    description: "Cuatro tipos. Diez preguntas. Una lectura honesta.",
     type: "website",
   },
 };

@@ -170,9 +170,9 @@ export async function generateShareImage(
 
   // ── URL / CTA at bottom ──
   if (format === 'square') {
-    // WhatsApp: subtle CTA with URL
-    ctx.fillStyle = 'rgba(92,88,82,0.5)'
-    ctx.font = `300 17px ${uiFont}`
+    // WhatsApp: CTA with URL
+    ctx.fillStyle = 'rgba(200,196,190,0.80)'
+    ctx.font = `300 20px ${uiFont}`
     try { (ctx as CanvasRenderingContext2D & { letterSpacing: string }).letterSpacing = '2px' } catch { /* */ }
     ctx.fillText(`Hacé el test  ·  ${APP_URL}`, W / 2, H - 52)
     try { (ctx as CanvasRenderingContext2D & { letterSpacing: string }).letterSpacing = '0px' } catch { /* */ }

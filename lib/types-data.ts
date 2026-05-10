@@ -28,7 +28,7 @@ export const typesData: Record<TypeKey, PersonalityType> = {
     key: 'E',
     name: 'LA EDITORA',
     slug: 'editora',
-    tagline: 'La que define el estándar — y quien lo paga.',
+    tagline: 'La que define el estándar. Y quien lo paga.',
     accentColor: '#F4F2EE',
     accentName: 'editor',
     characterName: 'Miranda Priestly',
@@ -36,7 +36,7 @@ export const typesData: Record<TypeKey, PersonalityType> = {
     image: '/characters/miranda.jpg',
     verdict: [
       'Operás desde la autoridad. No la pediste; la sostenés. Definís el marco contra el que el resto se mide, y eso te ahorra una conversación que el resto todavía está teniendo.',
-      'No querés ser admirada. Querés ser correcta. Y descubriste, en algún momento que ya no recordás, que esas dos cosas no siempre coinciden — y que vos elegiste la segunda.',
+      'No querés ser admirada. Querés ser correcta. Y descubriste, en algún momento que ya no recordás, que esas dos cosas no siempre coinciden, y que vos elegiste la segunda.',
       'Lo que la gente lee como frialdad es claridad. Lo que la gente lee como exigencia es estándar. Lo que la gente lee como distancia es disciplina. No vas a corregir esa lectura. La economía emocional de explicarse es algo que hace mucho dejaste de poder pagar.',
     ],
     whatItCosts: [
@@ -65,7 +65,7 @@ export const typesData: Record<TypeKey, PersonalityType> = {
     characterActor: 'interpretada por Anne Hathaway',
     image: '/characters/andy.jpg',
     verdict: [
-      'Te movés bien entre sistemas. Aprendés idiomas culturales rápido — el idioma del trabajo, el idioma de tus amigos, el idioma de la familia. Eso te hace útil, querida y, cuando estás cansada, levemente extranjera en todos lados.',
+      'Te movés bien entre sistemas. Aprendés idiomas culturales rápido: el idioma del trabajo, el idioma de tus amigos, el idioma de la familia. Eso te hace útil, querida y, cuando estás cansada, levemente extranjera en todos lados.',
       'Tu integridad no es rigidez: es brújula. Tomás decisiones según un código personal que rara vez explicás en voz alta porque te da pudor. Te admirás de la gente que es lo suficientemente directa como para incomodarse.',
       'Lo que la gente lee como adaptabilidad es ambivalencia productiva. Lo que la gente lee como empatía es lectura emocional aguda. Lo que la gente lee como ingenuidad es una decisión consciente de no perder ciertas formas de mirar el mundo.',
     ],
@@ -77,7 +77,7 @@ export const typesData: Record<TypeKey, PersonalityType> = {
     shadowKey: 'C',
     shadowText: 'Cuando dejás de explicar, lo que aparece es el gusto: la capacidad de elegir, ordenar y elegir de nuevo. Esa parte tuya pesa más de lo que te das cuenta.',
     whoReadWell: { type: 'El Curador', text: 'Reconocés la sabiduría silenciosa. Sabés que la influencia real no necesita megáfono.' },
-    whoChallenges: { type: 'La Editora', text: 'Su frialdad estructural te incomoda. No porque la juzgues — porque sabés que parte de vos la admira.' },
+    whoChallenges: { type: 'La Editora', text: 'Su frialdad estructural te incomoda. No porque la juzgues, sino porque sabés que parte de vos la admira.' },
     whoAdmire: { type: 'La Editora', text: 'Querés la claridad que tiene. No el costo que paga. Esa tensión te define.' },
     coverLine: '"Aprendí el idioma. Elegí dónde vivir."',
     shareCaption: 'La Traductora. Creo que está bien. También creo que es educado de su parte.',

@@ -78,7 +78,7 @@ export default function ShareButtons({ type }: Props) {
         {squareStatus === 'generating'
           ? 'Generando…'
           : squareStatus === 'error'
-            ? 'Error — reintentar'
+            ? 'Error. Intentá de nuevo'
             : 'Compartir · WhatsApp'}
       </button>
 
@@ -91,7 +91,7 @@ export default function ShareButtons({ type }: Props) {
         {storyStatus === 'generating'
           ? 'Generando…'
           : storyStatus === 'error'
-            ? 'Error — reintentar'
+            ? 'Error. Intentá de nuevo'
             : 'Compartir · Historia'}
       </button>
     </div>

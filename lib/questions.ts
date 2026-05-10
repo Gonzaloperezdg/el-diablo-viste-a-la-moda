@@ -216,7 +216,7 @@ export const questions: Question[] = [
   {
     id: 19,
     scene: "La comparación",
-    text: "Alguien te compara directamente con otra persona — en tu cara — como si fuera un cumplido. ¿Cómo lo procesás?",
+    text: "Alguien te compara directamente con otra persona, en tu cara, como si fuera un cumplido. ¿Cómo lo procesás?",
     options: [
       { id: 'A', text: "Me irrita. No soy una referencia relativa.", scores: { E: 2, C: 1 } },
       { id: 'B', text: "Me pregunto si la comparación tiene razón y en qué medida.", scores: { T: 2, A: 1 } },
@@ -337,7 +337,7 @@ export const questions: Question[] = [
   {
     id: 30,
     scene: "El cierre",
-    text: "Si alguien que te conoce bien tuviera que describir cómo sos realmente — no cómo te presentás — ¿qué palabra no debería faltar?",
+    text: "Si alguien que te conoce bien tuviera que describir cómo sos realmente, no cómo te presentás, ¿qué palabra no debería faltar?",
     options: [
       { id: 'A', text: "Exigente. Conmigo y con todo lo que me importa.", scores: { E: 2, C: 1 } },
       { id: 'B', text: "Honesta/o. A veces incómodamente.", scores: { T: 2, E: 1 } },
