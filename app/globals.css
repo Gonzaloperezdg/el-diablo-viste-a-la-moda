@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-jost: 'Jost', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0A0A0B;
+  color: #F4F2EE;
+  font-family: var(--font-cormorant);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Screen transitions ─── */
+.screen-enter {
+  animation: screenEnter 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.screen-exit {
+  animation: screenExit 0.35s cubic-bezier(0.55, 0, 1, 0.45) forwards;
+}
+
+@keyframes screenEnter {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes screenExit {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-12px); }
+}
+
+/* ─── Letter reveal ─── */
+.letter-reveal span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: letterIn 0.4s ease-out forwards;
+}
+
+@keyframes letterIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Staggered fade up ─── */
+.stagger-children > * {
+  opacity: 0;
+  animation: fadeUp 0.7s ease-out forwards;
+}
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.25s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.55s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.7s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.85s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Quiz option hover ─── */
+.quiz-option {
+  transition: transform 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+              border-color 0.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+              color 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+  border-left: 2px solid transparent;
+  cursor: pointer;
+}
+
+.quiz-option:hover {
+  transform: translateX(8px);
+  color: #F4F2EE;
+  border-left-color: #27262A;
+}
+
+.quiz-option.selected {
+  transform: translateX(12px);
+  color: #F4F2EE;
+  border-left-color: #F4F2EE;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0A0A0B; }
+::-webkit-scrollbar-thumb { background: #27262A; border-radius: 2px; }
+
+/* ─── Selection ─── */
+::selection { background: #F4F2EE22; }
+
+/* ─── Cursor blinking ─── */
+.cursor-blink::after {
+  content: '|';
+  animation: blink 1s steps(1) infinite;
+  margin-left: 2px;
+  opacity: 0.7;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 0; }
+}
+
+/* ─── Divider line ─── */
+.divider-line {
+  height: 1px;
+  background: #27262A;
+  width: 100%;
+}
+
+/* ─── Result section scroll ─── */
+.result-section {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .result-section {
+    padding: 6rem 3rem;
+  }
+}
+
+/* ─── Grain overlay ─── */
+.grain::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* ─── Character image reveal ─── */
+@keyframes imageReveal {
+  from { opacity: 0; transform: scale(1.04); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.character-image-reveal {
+  animation: imageReveal 1.4s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@keyframes imagePulseIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.character-image-bg {
+  animation: imagePulseIn 2s ease-out forwards;
+}
+
+/* ─── Cover line pulse ─── */
+.cover-line-text {
+  position: relative;
+}
+
+.cover-line-text::before {
+  content: '"';
+  position: absolute;
+  left: -0.5em;
+  opacity: 0.3;
+}
+
+/* ─── Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .screen-enter, .screen-exit { animation: none; opacity: 1; transform: none; }
+  .stagger-children > * { animation: none; opacity: 1; transform: none; }
+  .letter-reveal span { animation: none; opacity: 1; transform: none; }
+  .cursor-blink::after { animation: none; }
+  .quiz-option { transition: none; }
+}
