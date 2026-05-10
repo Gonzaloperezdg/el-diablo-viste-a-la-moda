@@ -60,19 +60,11 @@ export default function ResultScreen({ result, onRestart }: Props) {
   const { dominant, shadow } = result
   const type = typesData[dominant]
   const shadowType = typesData[shadow]
-  const [copied, setCopied] = useState(false)
-
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text).then(() => {
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
-    })
-  }
 
   return (
     <div className="min-h-dvh">
 
-      {/* ─── COVER — grid editorial imagen + tipografía ─── */}
+      {/* ─── COVER ─── */}
       <div className="flex flex-col md:grid md:grid-cols-[55fr_45fr] md:min-h-dvh overflow-hidden">
 
         {/* Contenido: texto del tipo */}
@@ -122,11 +114,14 @@ export default function ResultScreen({ result, onRestart }: Props) {
 
             {/* Tagline */}
             <p
-              className="font-display font-light italic text-ink-secondary text-pretty"
+              className="font-display font-light italic text-ink-secondary text-pretty mb-10 md:mb-12"
               style={{ fontSize: 'clamp(1rem, 1.8vw, 1.35rem)', maxWidth: '420px' }}
             >
               {type.tagline}
             </p>
+
+            {/* CTA compartir */}
+            <ShareButtons type={type} />
 
             {/* Scroll cue */}
             <div className="mt-14 md:mt-20 flex flex-col gap-2 opacity-25">
@@ -160,7 +155,7 @@ export default function ResultScreen({ result, onRestart }: Props) {
       {/* ─── VEREDICTO ─── */}
       <Section>
         <SectionLabel>El veredicto.</SectionLabel>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 mb-12">
           {type.verdict.map((para, i) => (
             <p
               key={i}
@@ -171,6 +166,7 @@ export default function ResultScreen({ result, onRestart }: Props) {
             </p>
           ))}
         </div>
+        <ShareButtons type={type} />
       </Section>
 
       {/* ─── LO QUE TE CUESTA ─── */}
@@ -193,7 +189,6 @@ export default function ResultScreen({ result, onRestart }: Props) {
       <Section>
         <SectionLabel>Tu sombra.</SectionLabel>
 
-        {/* Composición imagen sombra + nombre */}
         <div className="flex gap-6 md:gap-10 items-start mb-8">
           <div className="relative shrink-0 overflow-hidden" style={{ width: '72px', height: '108px' }}>
             <Image
@@ -251,35 +246,6 @@ export default function ResultScreen({ result, onRestart }: Props) {
         </div>
       </Section>
 
-      {/* ─── TU LÍNEA DE PORTADA ─── */}
-      <Section accentBg accentColor={type.accentColor}>
-        <SectionLabel>Tu línea de portada.</SectionLabel>
-        <div className="mb-12">
-          <p
-            className="font-display font-light text-ink-primary leading-tight text-balance"
-            style={{
-              fontSize: 'clamp(1.8rem, 5vw, 3.5rem)',
-              letterSpacing: '-0.02em',
-              fontStyle: 'italic',
-            }}
-          >
-            {type.coverLine}
-          </p>
-        </div>
-
-        <div className="flex flex-col sm:flex-row gap-4">
-          <button
-            onClick={() => copyToClipboard(type.coverLine)}
-            className="font-ui text-caption text-ink-tertiary hover:text-ink-primary transition-[color] duration-200 border border-divider hover:border-ink-tertiary px-6 py-3 text-left sm:text-center"
-            style={{ letterSpacing: '0.1em', minWidth: '160px' }}
-          >
-            {copied ? '✓ Copiado' : 'Copiar frase'}
-          </button>
-        </div>
-
-        <ShareButtons type={type} />
-      </Section>
-
       {/* ─── CIERRE ─── */}
       <Section>
         <div className="text-center">
@@ -289,7 +255,7 @@ export default function ResultScreen({ result, onRestart }: Props) {
             {type.closingLine}
           </p>
 
-          {/* Grilla de los cuatro tipos con imágenes de personaje */}
+          {/* Grilla de los cuatro tipos */}
           <div className="grid grid-cols-2 gap-4 mb-12 max-w-md mx-auto">
             {(['E', 'T', 'A', 'C'] as TypeKey[]).map((key) => {
               const t = typesData[key]
