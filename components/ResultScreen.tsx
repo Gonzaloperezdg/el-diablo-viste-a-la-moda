@@ -348,6 +348,34 @@ export default function ResultScreen({ result, onRestart }: Props) {
           <p className="font-ui text-caption text-ink-tertiary mt-16 opacity-40" style={{ fontSize: '0.65rem', letterSpacing: '0.06em' }}>
             RUNWAY · Inspirado en El Diablo Viste a la Moda · Sin afiliación con la película ni sus productores.
           </p>
+
+          {/* Crédito del autor */}
+          <div className="mt-8 opacity-35 flex flex-col items-center gap-2">
+            <p className="font-ui text-ink-tertiary" style={{ fontSize: '0.6rem', letterSpacing: '0.1em' }}>
+              Una editorial de Gonzalo Perez
+            </p>
+            <div className="flex gap-4">
+              <a
+                href="https://www.linkedin.com/in/gonzaloperezdg/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-ui text-ink-tertiary hover:text-ink-secondary transition-[color] duration-200 border-b border-current pb-px"
+                style={{ fontSize: '0.58rem', letterSpacing: '0.08em' }}
+              >
+                LinkedIn
+              </a>
+              <span className="font-ui text-ink-tertiary" style={{ fontSize: '0.58rem' }}>·</span>
+              <a
+                href="https://gonzaloperezdg.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-ui text-ink-tertiary hover:text-ink-secondary transition-[color] duration-200 border-b border-current pb-px"
+                style={{ fontSize: '0.58rem', letterSpacing: '0.08em' }}
+              >
+                Portfolio
+              </a>
+            </div>
+          </div>
         </div>
       </Section>
     </div>
